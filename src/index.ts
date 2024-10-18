@@ -1,5 +1,5 @@
 import { createPublicClient, http, PublicClient, isAddress } from 'viem';
-import { mainnet } from 'viem/chains';
+import { avalanche } from 'viem/chains';
 import avvyWrapper, { AvvyWrapper, AvvyProfile } from './avvy';
 import mamboWrapper, { MamboWrapper, MamboProfile } from './mambo';
 
@@ -14,7 +14,7 @@ export class MAMBOPROFILE {
 
   constructor(client?: PublicClient) {
     this.client = client || createPublicClient({
-      chain: mainnet,
+      chain: avalanche,
       transport: http()
     });
     

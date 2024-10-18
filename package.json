@@ -1,0 +1,44 @@
+{
+  "name": "mambo-profiles",
+  "version": "0.0.1",
+  "description": "Small package for resolving Mambo and AVVY names",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "check-exports": "attw --pack ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xSmitty/mambo-profiles.git"
+  },
+  "keywords": [
+    "Mambo"
+  ],
+  "author": "Smitty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xSmitty/mambo-profiles/issues"
+  },
+  "homepage": "https://github.com/0xSmitty/mambo-profiles#readme",
+  "dependencies": {
+    "@avvy/client": "^4.2.8",
+    "ethers": "^6.13.4",
+    "viem": "^1.19.11"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  }
+}

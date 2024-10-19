@@ -1,6 +1,6 @@
 {
   "name": "mambo-profiles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Small package for resolving Mambo and AVVY names",
   "types": "dist/src/index.d.ts",
   "files": [

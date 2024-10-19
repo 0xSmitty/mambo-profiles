@@ -1,4 +1,4 @@
-import { createPublicClient, http, PublicClient, isAddress } from 'viem';
+import { createPublicClient, http, PublicClient, isAddress, Address } from 'viem';
 import { avalanche } from 'viem/chains';
 import avvyWrapper, { AvvyWrapper, AvvyProfile } from './avvy';
 import mamboWrapper, { MamboWrapper, MamboProfile } from './mambo';
@@ -22,7 +22,7 @@ export class MAMBOPROFILE {
     this.mambo = mamboWrapper(this.client);
   }
 
-  async getProfile(address: string): Promise<CombinedProfile | undefined> {
+  async getProfile(address: Address): Promise<CombinedProfile | undefined> {
     if (!isAddress(address)) {
       console.error("Invalid address");
       return;
@@ -37,7 +37,7 @@ export class MAMBOPROFILE {
     };
   }
 
-  async getManyProfiles(addresses: string[]): Promise<Record<string, CombinedProfile> | undefined> {
+  async getManyProfiles(addresses: Address[]): Promise<Record<string, CombinedProfile> | undefined> {
     if (!Array.isArray(addresses)) {
       console.error("Addresses must be an array");
       return;

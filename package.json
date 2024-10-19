@@ -25,8 +25,6 @@
   },
   "homepage": "https://github.com/0xSmitty/mambo-profiles#readme",
   "dependencies": {
-    "@avvy/client": "^4.2.8",
-    "ethers": "^6.13.4",
     "viem": "^2.12.19"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { PublicClient, Address } from 'viem';
-import { ABI, ADDRESS } from './contractInfo';
+import { MAMBO_ABI, MAMBO_ADDRESS } from './contractInfo';
 
 interface ProfilePicView {
   isSet: boolean;
@@ -38,8 +38,8 @@ export interface MamboWrapper {
 const mamboNameWrapper = (client: PublicClient): MamboWrapper => ({
   async getProfile(address: Address): Promise<MamboProfile> {
     const profile = await client.readContract({
-      address: ADDRESS,
-      abi: ABI,
+      address: MAMBO_ADDRESS,
+      abi: MAMBO_ABI,
       functionName: 'getProfileByWallet',
       args: [address]
     }) as UserProfile;
@@ -48,8 +48,8 @@ const mamboNameWrapper = (client: PublicClient): MamboWrapper => ({
 
   async getManyProfiles(addresses: Address[]): Promise<MamboProfile[]> {
     const profiles = await client.readContract({
-      address: ADDRESS,
-      abi: ABI,
+      address: MAMBO_ADDRESS,
+      abi: MAMBO_ABI,
       functionName: 'getManyProfilesByWallets',
       args: [addresses]
     }) as UserProfile[];

@@ -1,11 +1,11 @@
 Small lib to handle address -> avvy/mambo name resolution in a Viem project
 
-Basically just a wrapper over the Avvy js client (https://github.com/avvydomains/js-client) using a Viem client and adding in the Mambo profile stuff.
+Doesn't rely on the avvy lib (or its ethers dependency), just simply uses Viem to query for avvy names and mambo profile info.
 
 ## Installation
 
 ```
-npm i --save @avvy/client
+npm i --save mambo-profiles
 ```
 
 ## Usage
